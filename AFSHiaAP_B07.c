@@ -18,7 +18,7 @@ void caesar_encrypt(char *data){
 	if(!strcmp(data, ".")) return;
 	if(!strcmp(data, "..")) return;
 	for(i=0; i<strlen(data); i++){
-		for(j=0; j<93; j++){
+		for(j=0; j<95; j++){
 			if(data[i] == caesar[j]){
 				data[i] = caesar[(j+17)%94];
 				break;
@@ -31,7 +31,7 @@ void caesar_decrypt(char *data){
 	if(!strcmp(data, ".")) return;
 	if(!strcmp(data, "..")) return;
 	for(i=0; i<strlen(data); i++){
-		for(j=0; j<100; j++){
+		for(j=0; j<95; j++){
 			if(data[i] == caesar[j]){
 				data[i] = caesar[((j-17)+94)%94];
 				break;
